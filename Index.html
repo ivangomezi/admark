@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Admark</title>
+
+    <!--jquery y bootstrap-->
+    <link rel="stylesheet" href="/Content/Site.css" type="text/css" />
+    <link rel="stylesheet" href="/Content/bootstrap.css" type="text/css" />
+    <script type="text/javascript" src="/Scripts/jquery-3.5.0.min.js"></script>
+    <script type="text/javascript" src="/Scripts/bootstrap.min.js"></script>
+
+    <!--LineIcons y Fontawesome-->
+    <link rel="stylesheet" href="/Content/svg_lineicons/font-css/LineIcons.css" />
+    <link rel="stylesheet" href="/Content/svg_fontawesome/css/all.css" />
+
+    <!--Font gooogle-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <script>
+        $(document).ready(function () {
+            $("body").on("click", "#btn_modal", function (e) {
+                if (
+                    $("#txt_tele").val() != "" &&
+                    $("#txt_name").val() != "" &&
+                    $("#txt_mail").val() != "" &&
+                    $("#chk_politicas").is(':checked') === true
+
+                ) {
+                    e.preventDefault();
+                    $("#btn_modal").attr("data-toggle", "modal");
+                }
+                else {
+                    $("#btn_modal").removeAttr("data-toggle");
+                }
+            });
+        });
+    </script>
+
+    <header>
+        <div class="img-container">
+            <img src="/Content/img/_material/logo-desktop.png" alt="Error img" />
+        </div>
+        <nav>
+            <button>Descargar proyecto</button>
+        </nav>
+    </header>
+
+    <section class="container-body">
+        <!--A-->
+        <div class="grid-body-a grid-body">
+            <div class="content-body">
+                <div class="content-title">
+                    <h5><i class="fas fa-tag"></i> Oferta online</h5>
+                </div>
+                <div class="content-txt">
+                    <p>40</p>
+                    <ul>
+                        <li>$</li>
+                        <li>dto.</li>
+                    </ul>
+                </div>
+                <p>Al comprar online</p>
+                <div class="content-btn">
+                    <button type="button">¡Obtener oferta!</button>
+                </div>
+            </div>
+        </div>
+        <!--B-->
+        <div class="grid-body-b grid-body">
+            <div class="content-body">
+                <p>Te llamamos gratis</p>
+                <form class="content-form">
+                    <input type="text" id="txt_tele" placeholder="Teléfono" name="telefono" required />
+                    <input type="text" id="txt_name" placeholder="Nombre" name="nombre" required />
+                    <input type="email" id="txt_mail" placeholder="Email" name="mail" required />
+
+                    <input type="checkbox" id="chk_politicas" name="politica" value="Acepto la politica de privacidad" required />
+                    <label for="chk_politicas">Acepto la politica de privacidad</label>
+
+                    <button type="submit" id="btn_modal" data-target="#modal_llamada">
+                        <i class="fas fa-headset"></i> Llámame gratis <i class="fas fa-angle-right"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!--modal-->
+        <div class="modal fade" id="modal_llamada">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title"><i class="fas fa-headset"></i> LLamada gratis</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="box-shadow:none;">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Recibimos tu registro de llamada, uno de nuestros asesores se
+                        pondrá en contacto lo más pronto posible. <br /> <strong>¡Gracias por contactarnos!</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Ivan Gomez © 2021</p>
+    </footer>
+
+</body>
+</html>
