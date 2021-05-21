@@ -1,0 +1,203 @@
+﻿:root {
+    --primary-bg-color: rgba(78, 138, 6, 1);
+    --btn-bg-color: rgba(247, 102, 2, 1);
+}
+
+body {
+    background-color: #f9f9f9;
+    font-family: 'Lato', sans-serif;
+}
+
+button {
+    box-shadow: 2px 2px 3px rgba(0,0,0,.3);
+}
+button:hover {
+    opacity: .9;
+}
+button:active {
+    box-shadow: 2px 2px 3px inset rgba(0,0,0,.3);
+}
+
+
+/*header*/
+header {
+    display: inline-flex;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #e1e1e1;
+    background: #fff;
+    position: relative;
+}
+
+.img-container {
+    width: 10rem;
+}
+.img-container img {
+    width: 100%;
+}
+
+nav {
+    width: 100%;
+    text-align: end;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+nav button {
+    padding: 10px 30px;
+    margin: 5px;
+    border-radius: 50px;
+    border: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    outline: none;
+    background: var(--primary-bg-color);
+    color: #fff;
+    transition: all 0.5s;
+}
+
+
+
+/*container body*/
+.container-body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    margin-top: 50px;
+}
+
+.grid-body-a {
+    grid-area: 1 / 1 / 2 / 2;
+    text-align: center;
+    text-transform: uppercase;
+}
+.grid-body-b {
+    grid-area: 1 / 2 / 2 / 3;
+    text-align: center;
+}
+
+.content-body {
+    width: 18rem;
+    margin: auto;
+    background: #fff;
+    padding-bottom: 30px;
+    border-radius: 5px;
+    border: 1px solid #e1e1e1;
+}
+
+/*grid a*/
+.content-body .content-title h5 {
+    background: var(--primary-bg-color);
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px 5px 0px 0px;
+    font-weight: bold;
+}
+.container-body .content-txt {
+    display: inline-flex;
+    color: var(--primary-bg-color);
+}
+.container-body .content-txt p {
+    font-size: 5.4rem;
+    font-weight: bold;
+    margin: 0px;
+    margin-top: -20px;
+}
+.container-body .content-txt ul {
+    padding: 0px;
+}
+.container-body .content-txt ul li {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-align: left;
+    margin-bottom: -10px;
+}
+.container-body .content-btn button {
+    border: none;
+    padding: 10px 20px;
+    background: var(--btn-bg-color);
+    color: #fff;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+/*grid b*/
+.grid-body-b .content-body {
+    box-shadow: 3px 3px 5px rgba(0,0,0,.3);
+}
+.grid-body-b .content-body p {
+    text-align: center;
+    color: rgba(0,0,0,.5);
+    padding: 10px;
+    text-transform: uppercase;
+    margin: 0px;
+}
+.grid-body-b .content-body .content-form {
+    width: 85%;
+    margin: auto;
+}
+.grid-body-b .content-body .content-form input {
+    width: 100%;
+    margin: 5px;
+    padding: 5px 10px;
+    background: #f9f9f9;
+    border: 1px solid #e1e1e1;
+    border-radius: 3px;
+}
+.grid-body-b .content-body .content-form input[type=checkbox] {
+    width: auto;
+}
+.grid-body-b .content-body .content-form label {
+    font-size: 10px;
+    color: rgba(0,0,0,.5);
+}
+.grid-body-b .content-body .content-form button {
+    border: none;
+    padding: 10px 20px;
+    background: var(--btn-bg-color);
+    color: #fff;
+    border-radius: 5px;
+    text-transform: uppercase;
+    margin: 10px;
+}
+
+
+/*footer*/
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 10px;
+    background: var(--primary-bg-color);
+    margin-top: 30px;
+}
+footer p {
+  margin-bottom: 0px;
+  color: #fff;
+  font-weight: bold;
+}
+
+
+
+
+@media (max-width: 800px) {
+    .container-body {
+        display: block;
+    }
+
+    .grid-body-a {
+        margin-bottom: 10px;
+    }
+
+    footer {
+        position: relative;
+    }
+}
